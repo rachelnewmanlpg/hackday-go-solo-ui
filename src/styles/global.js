@@ -1,5 +1,6 @@
 import styledNormalize from 'styled-normalize';
 import styled, { createGlobalStyle } from 'styled-components';
+import { UserIcon } from '@pickle/icons';
 
 export const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
@@ -116,4 +117,91 @@ export const Header = styled.header`
     justify-content: center;
     align-items: center;
     background-color: #fff;
+`;
+
+export const AttractionList = styled.div`
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    p {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .attraction {
+        &--btn {
+            display: block;
+            width: 80%;
+            color: #fff;
+            background: #18d2ff;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 5px;
+
+            &__submit {
+                position: fixed;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0px 110px 80px 140px white;
+            }
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+
+        &--wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 5px;
+            row-gap: 5px;
+        }
+
+        button {
+            color: #18d2ff;
+            position: absolute;
+            left: 10px;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+
+        &--tile {
+            width: 100%;
+            background: #111;
+            color: #fff;
+            padding: 10px;
+            aspect-ratio: 1 / 1;
+            position: relative;
+
+            &__content {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                font-size: 14px;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                display: block;
+                display: -webkit-box;
+                overflow: hidden !important;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+            }
+        }
+    }
+`;
+
+export const UserIconWrapper = styled(UserIcon)`
+    fill: #18d2ff;
+
+    &.active {
+        fill: #9df6c7;
+    }
 `;
