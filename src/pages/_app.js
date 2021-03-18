@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { withRouter } from 'next/router';
 import { PrimaryTheme } from '@pickle/themes';
-import { GlobalStyle } from '../styles/global';
+import { GlobalStyle, Header } from '../styles/global';
 import { wrapper } from '../store/configureStore';
 
 const App = ({ Component, pageProps }) => (
@@ -21,6 +21,9 @@ const App = ({ Component, pageProps }) => (
         </Head>
         <ThemeProvider theme={PrimaryTheme}>
             <GlobalStyle />
+            <Header>
+                <img src="/assets/logo.png" alt="" width="100" align="center" />
+            </Header>
             <Component {...pageProps} />
         </ThemeProvider>
     </>
