@@ -1,5 +1,5 @@
 import styledNormalize from 'styled-normalize';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
@@ -109,4 +109,11 @@ export const GlobalStyle = createGlobalStyle`
     background: transparent;
     border: 0;
   }
+`;
+
+export const Header = styled.header`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
 `;
