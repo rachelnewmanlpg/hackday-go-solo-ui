@@ -26,6 +26,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-weight: 400;
     text-align: left;
+    color: ${({ theme }) => theme.colors.primary};
+    font-family: Arial, Helvetica, sans-serif
   }
 
   * {

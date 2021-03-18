@@ -3,7 +3,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { withRouter } from 'next/router';
-import { activeTheme } from '../styles/theme';
+import { PrimaryTheme } from '@pickle/themes';
 import { GlobalStyle } from '../styles/global';
 import { wrapper } from '../store/configureStore';
 
@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }) => (
             <link rel="manifest" href="/favicon/site.webmanifest" />
             <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
         </Head>
-        <ThemeProvider theme={activeTheme}>
+        <ThemeProvider theme={PrimaryTheme}>
             <GlobalStyle />
             <Component {...pageProps} />
         </ThemeProvider>
