@@ -117,3 +117,34 @@ export const Header = styled.header`
     align-items: center;
     background-color: #fff;
 `;
+
+export const Profile = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+
+    button {
+        color: #fff;
+        background: #1c1870;
+        border: solid 2px #1c1870;
+        margin: 10px;
+        padding: 10px 0;
+
+        &:focus {
+            outline: none;
+            opacity: 0.8;
+        }
+    }
+
+    .profile {
+        padding: 10px 0;
+
+        &--avatar {
+            margin: 20px 0;
+        }
+        &--name {
+            margin: 50px 0;
+        }
+    }
+`;
