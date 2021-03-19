@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-
+import { useDispatch } from 'react-redux';
 import data from '../data/attractionList.json';
 import { AttractionList as Container, UserIconWrapper } from '../styles/global';
+import { attractionActions } from '../store/ducks/attractions';
 
 const AttractionList = ({ attractions }) => {
+    const router = useRouter();
+    const dispatch = useDispatch();
     const [friendAttractions, setFriendAttractions] = useState([]);
 
     const handleClick = (code) => {
@@ -21,6 +25,12 @@ const AttractionList = ({ attractions }) => {
 
     const handleSubmit = () => {
         console.log(friendAttractions);
+        dispatch(
+            attractionActions.selectAttractions({
+                friendAttractions,
+            })
+        );
+        router.push('/selectedAttractions');
     };
 
     return (
