@@ -48,6 +48,7 @@ module.exports = {
         'react/jsx-indent-props': 'off',
         'react/display-name': 1,
         'react/prefer-stateless-function': 0,
+        'react/prop-types': 'off',
         'react/state-in-constructor': 0,
         'react/jsx-curly-newline': 0,
         'react/jsx-filename-extension': [
