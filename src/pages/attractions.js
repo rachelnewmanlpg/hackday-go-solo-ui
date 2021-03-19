@@ -17,16 +17,16 @@ const AttractionList = () => {
     useEffect(() => {
         dispatch(attractionActions.getAttractionsByCity('Nyc'));
     });
-    const handleClick = (code) => {
-        if (friendAttractions.includes(code)) {
-            setFriendAttractions(friendAttractions.filter((e) => e !== code));
+    const handleClick = (sku) => {
+        if (friendAttractions.includes(sku)) {
+            setFriendAttractions(friendAttractions.filter((e) => e !== sku));
         } else {
-            setFriendAttractions([...friendAttractions, code]);
+            setFriendAttractions([...friendAttractions, sku]);
         }
     };
 
     const handleSelectAll = () => {
-        setFriendAttractions([...attractions.map((item) => item.code)]);
+        setFriendAttractions([...attractions.map((item) => item.sku)]);
     };
 
     const handleSubmit = () => {
@@ -56,9 +56,9 @@ const AttractionList = () => {
 
                                 <div className="attraction--tile__content">
                                     {item.name}
-                                    <button type="button" onClick={() => handleClick(item.code)}>
+                                    <button type="button" onClick={() => handleClick(item.sku)}>
                                         <UserIconWrapper
-                                            className={friendAttractions.includes(item.code) ? 'active' : ''}
+                                            className={friendAttractions.includes(item.sku) ? 'active' : ''}
                                         />
                                     </button>
                                 </div>

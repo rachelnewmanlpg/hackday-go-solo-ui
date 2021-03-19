@@ -5,7 +5,7 @@ import { getData, postData } from '../../utils/request';
 import safeSaga from './safaSaga';
 import { attractionActions } from '../ducks/attractions';
 
-export function* getAttractionByCity({ payload: data }) {
+export function* getAttractionsByCity({ payload: data }) {
     yield put({
         type: attractionActions.getAttractionSuccess.type,
         payload: {
@@ -22,7 +22,7 @@ export function* getAttractionByCity({ payload: data }) {
 }
 
 function* watchDataRequest() {
-    yield takeLatest(attractionActions.getAttractionByCity, safeSaga(getAttractionByCity));
+    yield takeLatest(attractionActions.getAttractionsByCity, safeSaga(getAttractionsByCity));
 }
 
 export default watchDataRequest;

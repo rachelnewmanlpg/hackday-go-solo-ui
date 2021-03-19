@@ -31,7 +31,6 @@ export const initialState = {
             categories: ['INDOORS'],
         },
     ],
-
     selected: [],
 };
 
