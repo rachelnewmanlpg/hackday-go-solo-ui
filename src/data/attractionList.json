@@ -93,8 +93,8 @@
         "childGatePrice": 13,
         "childSellPrice": 13,
         "premium": false,
-        "lat": "51.503364",
-        "lng": "-0.120453"
+        "lat": "40.754124",
+        "lng": "-74.000825"
     },
     "Nyc_Att_Museum_of_Modern_Art": {
         "id": 100829,
@@ -116,7 +116,10 @@
         "adultSellPrice": 37,
         "childGatePrice": 31,
         "childSellPrice": 31,
-        "premium": false
+        "premium": false,
+      "lat": "40.761717",
+      "lng": "-73.977643"
+
     },
     "Nyc_Att_The_Metropolitan_Museum_of_Art": {
         "id": 100800,
@@ -127,8 +130,8 @@
         "childGatePrice": 0,
         "childSellPrice": 0,
         "premium": false,
-      "lat": "51.503364",
-      "lng": "-0.120453"
+      "lat": "40.711691",
+      "lng": "-74.012457"
     },
     "Nyc_Att_Intrepid_Sea_Air_and_Space_Museum": {
         "id": 100795,
@@ -139,8 +142,8 @@
         "childGatePrice": 24,
         "childSellPrice": 24,
         "premium": false,
-      "lat": "51.503364",
-      "lng": "-0.120453"
+      "lat": "40.76742",
+      "lng": "-73.98477"
     },
     "Nyc_Att_Central_Park_Sightseeing": {
         "id": 105444,
@@ -151,8 +154,8 @@
         "childGatePrice": 54.44,
         "childSellPrice": 54.44,
         "premium": false,
-      "lat": "51.503364",
-      "lng": "-0.120453"
+      "lat": "40.713312",
+      "lng": "-74.013336"
     },
     "Nyc_Att_Central_Park_Sightseeing_Bike_Tour": {
         "id": 107648,
@@ -175,8 +178,8 @@
         "childGatePrice": 24.99,
         "childSellPrice": 24.99,
         "premium": false,
-      "lat": "51.503364",
-      "lng": "-0.120453"
+      "lat": "40.781903",
+      "lng": "-73.971247"
     },
     "Nyc_Att_Solomon_R_Guggenheim_Museum": {
         "id": 100861,
