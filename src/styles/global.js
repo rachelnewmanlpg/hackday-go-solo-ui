@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     margin: 0 0 1px;
     padding: 0;
-    background: #f0f0f0;
     box-sizing: border-box;
     font-synthesis: none;
     -moz-osx-font-smoothing: grayscale;
@@ -40,6 +39,35 @@ export const GlobalStyle = createGlobalStyle`
 
     font-synthesis: inherit;
     font-smoothing: inherit;
+  }
+
+  @font-face {
+    font-family:"proxima-regular";
+    src:url("/assets/fonts/proxima-regular.woff2") format("woff2"),
+    url("/assets/fonts/proxima-regular.woff") format("woff"),
+    url("/assets/fonts/proxima-regular.otf") format("opentype");
+    font-style:normal;
+    font-weight:400;
+  }
+
+  @font-face {
+    font-family:"proxima-semibold";
+    src:url("/assets/fonts/proxima-semibold.woff2") format("woff2"),
+    url("/assets/fonts/proxima-semibold.woff") format("woff"),
+    url("/assets/fonts/proxima-semibold.otf") format("opentype");
+    font-style:normal;
+    font-weight:400;
+  }
+
+
+  @font-face {
+      font-family: "passport";
+      src:url("/assets/fonts/passport.woff") format("woff"),
+          url("/assets/fonts/passport.ttf") format("truetype"),
+          url("/assets/fonts/passport.svg#passport") format("svg");
+      font-weight: normal;
+      font-style: normal;
+
   }
 
   address {
