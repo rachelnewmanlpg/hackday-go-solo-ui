@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 import { CompanionFinderWrapper } from '../styles/global';
 import Card from '../components/CompanionCard';
 
 const CompanionFinder = ({ users, attraction }) => {
+  const router = useRouter();
     const handleClick = (id) => {
         // Send this somewhere
         axios({
@@ -16,7 +18,9 @@ const CompanionFinder = ({ users, attraction }) => {
 
     const handleSubmit = (code) => {
         // Go to the nearby maps
-        console.log(code);
+      router.push({
+        pathname: '/nearby',
+      });
     };
 
     return (
