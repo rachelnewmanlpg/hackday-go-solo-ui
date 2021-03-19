@@ -7,7 +7,10 @@
         "adultSellPrice": 45.73,
         "childGatePrice": 39.2,
         "childSellPrice": 39.2,
-        "premium": false
+        "premium": false,
+        "lat": "51.503364",
+        "lng": "-0.120453"
+
     },
     "Nyc_Att_Top_of_the_Rock_Observation_Deck": {
         "id": 100850,
@@ -17,7 +20,9 @@
         "adultSellPrice": 41.37,
         "childGatePrice": 34.84,
         "childSellPrice": 34.84,
-        "premium": false
+        "premium": false,
+        "lat": "51.503364",
+        "lng": "-0.120453"
     },
     "Nyc_Att_Classic_Tour_1_Day_Ticket_by_Big_Bus": {
         "id": 110771,
@@ -27,7 +32,9 @@
         "adultSellPrice": 59,
         "childGatePrice": 49,
         "childSellPrice": 49,
-        "premium": false
+        "premium": false,
+        "lat": "51.503364",
+        "lng": "-0.120453"
     },
     "Nyc_Att_Statue_of_Liberty_and_Ellis_Island_Immigration_Museu": {
         "id": 100899,
@@ -37,7 +44,9 @@
         "adultSellPrice": 20,
         "childGatePrice": 9,
         "childSellPrice": 9,
-        "premium": false
+        "premium": false,
+        "lat": "51.503364",
+        "lng": "-0.120453"
     },
     "Nyc_Att_Madame_Tussauds_General_Admission": {
         "id": 104593,
@@ -47,7 +56,9 @@
         "adultSellPrice": 37,
         "childGatePrice": 37,
         "childSellPrice": 37,
-        "premium": false
+        "premium": false,
+        "lat": "51.503364",
+        "lng": "-0.120453"
     },
     "Nyc_Att_9_11_Memorial_and_Museum": {
         "id": 111304,
@@ -57,7 +68,9 @@
         "adultSellPrice": 28,
         "childGatePrice": 17,
         "childSellPrice": 17,
-        "premium": false
+        "premium": false,
+        "lat": "51.503364",
+        "lng": "-0.120453"
     },
     "Nyc_Att_911_Walking_Tour": {
         "id": 106499,
@@ -67,7 +80,9 @@
         "adultSellPrice": 35,
         "childGatePrice": 20,
         "childSellPrice": 20,
-        "premium": false
+        "premium": false,
+        "lat": "51.503364",
+        "lng": "-0.120453"
     },
     "Nyc_Att_American_Museum_of_Natural_History": {
         "id": 100781,
@@ -77,7 +92,9 @@
         "adultSellPrice": 23,
         "childGatePrice": 13,
         "childSellPrice": 13,
-        "premium": false
+        "premium": false,
+        "lat": "51.503364",
+        "lng": "-0.120453"
     },
     "Nyc_Att_Museum_of_Modern_Art": {
         "id": 100829,
@@ -87,7 +104,9 @@
         "adultSellPrice": 25,
         "childGatePrice": 0,
         "childSellPrice": 0,
-        "premium": false
+        "premium": false,
+        "lat": "51.503364",
+        "lng": "-0.120453"
     },
     "Nyc_Att_2_Hour_Semi_Circle_Cruise": {
         "id": 105105,

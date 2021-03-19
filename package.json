@@ -82,6 +82,7 @@
     "redux-mock-store": "^1.5.4"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.3",
     "@pickle/avatar": "^1.0.9",
     "@pickle/button": "^3.0.10",
     "@pickle/icons": "^2.0.8",
