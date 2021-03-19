@@ -18,9 +18,9 @@ const Card = ({ user, handleClick }) => (
             </div>
 
             <div>Goes with the flow:</div>
-            <input type="range" id="gwtf" name="gwtf" min="0" max="11" />
+            <input type="range" id="gwtf" name="gwtf" min="0" max="11" value="5" />
             <div>Introvert:</div>
-            <input type="range" id="introvert" name="introvert" min="0" max="11" />
+            <input type="range" id="introvert" name="introvert" min="0" max="11" value="6" />
 
             <div />
         </div>

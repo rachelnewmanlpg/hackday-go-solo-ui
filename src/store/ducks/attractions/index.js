@@ -1,5 +1,5 @@
-import attractionReducer from './reducer';
+import attractionsReducer from './reducer';
 
 export { default as attractionActions } from './actions';
 
-export default attractionReducer;
+export default attractionsReducer;

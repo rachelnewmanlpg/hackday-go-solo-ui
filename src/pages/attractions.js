@@ -1,26 +1,32 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 import data from '../data/attractionList.json';
 import { AttractionList as Container, UserIconWrapper } from '../styles/global';
+import { StyledButton } from '../components/profileForm/styles';
 import { attractionActions } from '../store/ducks/attractions';
+import { getAttractionList } from '../store/selectors/attraction';
 
-const AttractionList = ({ attractions }) => {
+const AttractionList = () => {
     const router = useRouter();
-    const dispatch = useDispatch();
     const [friendAttractions, setFriendAttractions] = useState([]);
-
-    const handleClick = (code) => {
-        if (friendAttractions.includes(code)) {
-            setFriendAttractions(friendAttractions.filter((e) => e !== code));
+    const attractions = useSelector(getAttractionList);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(attractionActions.getAttractionsByCity('Nyc'));
+    });
+    const handleClick = (sku) => {
+        if (friendAttractions.includes(sku)) {
+            setFriendAttractions(friendAttractions.filter((e) => e !== sku));
         } else {
-            setFriendAttractions([...friendAttractions, code]);
+            setFriendAttractions([...friendAttractions, sku]);
         }
     };
 
     const handleSelectAll = () => {
-        setFriendAttractions([...attractions.map((item) => item.code)]);
+        setFriendAttractions([...attractions.map((item) => item.sku)]);
     };
 
     const handleSubmit = () => {
@@ -39,9 +45,9 @@ const AttractionList = ({ attractions }) => {
                 <h1>Attraction List</h1>
                 <p>Click the person icon to show you want to find a friend for that attraction.</p>
                 <p>Or...</p>
-                <button type="button" className="attraction--btn" onClick={handleSelectAll}>
+                <StyledButton type="button" className="attraction--btn" onClick={handleSelectAll}>
                     Find a friend for any attractions
-                </button>
+                </StyledButton>
                 <div className="attraction--wrapper">
                     {attractions.length > 0 &&
                         attractions.map((item) => (
@@ -50,25 +56,21 @@ const AttractionList = ({ attractions }) => {
 
                                 <div className="attraction--tile__content">
                                     {item.name}
-                                    <button type="button" onClick={() => handleClick(item.code)}>
+                                    <button type="button" onClick={() => handleClick(item.sku)}>
                                         <UserIconWrapper
-                                            className={friendAttractions.includes(item.code) ? 'active' : ''}
+                                            className={friendAttractions.includes(item.sku) ? 'active' : ''}
                                         />
                                     </button>
                                 </div>
                             </div>
                         ))}
                 </div>
-                <button type="button" className="attraction--btn attraction--btn__submit" onClick={handleSubmit}>
+                <StyledButton type="button" className="attraction--btn attraction--btn__submit" onClick={handleSubmit}>
                     Submit
-                </button>
+                </StyledButton>
             </Container>
         </>
     );
-};
-
-AttractionList.propTypes = {
-    attractions: PropTypes.array.isRequired,
 };
 
 export async function getStaticProps() {

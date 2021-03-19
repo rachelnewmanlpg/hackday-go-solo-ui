@@ -194,11 +194,7 @@ export const AttractionList = styled.div`
         &--btn {
             display: block;
             width: 80%;
-            color: #222;
-            background: #18d2ff;
-            padding: 10px;
             margin: 20px auto;
-            border-radius: 5px;
 
             &__submit {
                 position: fixed;
@@ -206,6 +202,9 @@ export const AttractionList = styled.div`
                 left: 50%;
                 transform: translateX(-50%);
                 box-shadow: 0px 110px 80px 140px white;
+                :hover {
+                    box-shadow: 0px 110px 80px 140px white;
+                }
             }
 
             &:focus,

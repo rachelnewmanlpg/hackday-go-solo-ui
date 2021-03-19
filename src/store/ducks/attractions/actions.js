@@ -1,8 +1,16 @@
 import { createAction } from '@reduxjs/toolkit';
 
-export const ns = 'profile';
+export const ns = 'attraction';
 
 export const initial = createAction(`${ns}/initial`);
+const getAttractionsByCity = createAction(`${ns}/getAttractionsByCity`, function prepare(data) {
+    return {
+        payload: {
+            data,
+        },
+    };
+});
+const getAttractionSuccess = createAction(`${ns}/getAttractionSuccess`);
 
 const selectAttractions = createAction(`${ns}/selectAttractions`, function prepare(data) {
     return {
@@ -11,5 +19,7 @@ const selectAttractions = createAction(`${ns}/selectAttractions`, function prepa
 });
 export default {
     initial,
+    getAttractionsByCity,
+    getAttractionSuccess,
     selectAttractions,
 };
