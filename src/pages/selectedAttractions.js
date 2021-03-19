@@ -1,14 +1,16 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-
+import { useSelector } from 'react-redux';
 import data from '../data/attractionList.json';
 import { AttractionList as Container } from '../styles/global';
 
 const AttractionList = ({ attractions }) => {
     const router = useRouter();
+    const stateAttractions = useSelector((state) => state.attractions.selected);
+    const selectedAttractions = attractions.filter((item) => stateAttractions.includes(item.code));
 
-    const handleClick = (id) => {
+    const handleClick = () => {
         router.push({
             pathname: '/companionFinder/',
         });
@@ -16,10 +18,10 @@ const AttractionList = ({ attractions }) => {
 
     return (
         <Container>
-            <h1>Attraction List</h1>
+            <h2>Selected Attractions</h2>
             <div className="attraction--wrapper">
-                {attractions.length > 0 &&
-                    attractions.map((item) => (
+                {selectedAttractions.length > 0 &&
+                    selectedAttractions.map((item) => (
                         <div className="attraction attraction--tile" key={item.id}>
                             <div className="attraction attraction--tile__image" />
 
@@ -42,6 +44,7 @@ AttractionList.propTypes = {
 
 export async function getStaticProps() {
     // GET list of attractions
+
     const attractions = Object.keys(data).map((key) => data[key]);
     return {
         props: {
