@@ -142,11 +142,11 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Header = styled.header`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #fff;
+    padding: 5px;
 `;
-
 
 export const Profile = styled.div`
     display: flex;
@@ -261,5 +261,17 @@ export const UserIconWrapper = styled(UserIcon)`
 
     &.active {
         fill: #9df6c7;
+    }
+`;
+
+export const SignUp = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+    > button {
+        margin-top: 100px;
     }
 `;
