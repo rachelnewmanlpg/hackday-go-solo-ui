@@ -251,6 +251,13 @@ export const AttractionList = styled.div`
                 padding: 5px;
                 background: #fff;
                 font-size: 14px;
+
+                button {
+                    border: solid 1px #1c1970;
+                    color: #1c1970;
+                    font-size: 12px;
+                    padding: 5px 10px;
+                }
             }
         }
     }
