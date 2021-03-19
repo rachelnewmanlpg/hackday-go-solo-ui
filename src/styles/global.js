@@ -1,5 +1,6 @@
 import styledNormalize from 'styled-normalize';
 import styled, { createGlobalStyle } from 'styled-components';
+import { UserIcon } from '@pickle/icons';
 
 export const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
@@ -118,6 +119,7 @@ export const Header = styled.header`
     background-color: #fff;
 `;
 
+
 export const Profile = styled.div`
     display: flex;
     flex-direction: column;
@@ -146,5 +148,90 @@ export const Profile = styled.div`
         &--name {
             margin: 50px 0;
         }
+    }
+`;
+
+export const AttractionList = styled.div`
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    p {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .attraction {
+        &--btn {
+            display: block;
+            width: 80%;
+            color: #222;
+            background: #18d2ff;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 5px;
+
+            &__submit {
+                position: fixed;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0px 110px 80px 140px white;
+            }
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+
+        &--wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            color: #18d2ff;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+
+        &--tile {
+            height: 100px;
+            width: 100%;
+            padding: 0 10px;
+            position: relative;
+            margin: 10px 0;
+            display: flex;
+
+            &__image {
+                width: 150px;
+                height: 100px;
+                background: #1c1970;
+            }
+
+            &__content {
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+                background: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+`;
+
+export const UserIconWrapper = styled(UserIcon)`
+    fill: #18d2ff;
+
+    &.active {
+        fill: #9df6c7;
     }
 `;
