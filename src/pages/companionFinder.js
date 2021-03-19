@@ -14,12 +14,22 @@ const CompanionFinder = ({ users, attraction }) => {
         });
     };
 
+    const handleSubmit = (code) => {
+        // Go to the nearby maps
+        console.log(code);
+    };
+
     return (
         <CompanionFinderWrapper>
             <h2>Find your companion from the list below</h2>
             <div className="c-card__attraction">
                 <div className="c-card__attraction--image" />
-                <div className="c-card__attraction--content">{attraction.name}</div>
+                <div className="c-card__attraction--content">
+                    <div>{attraction.name}</div>
+                    <button type="button" onClick={() => handleSubmit(attraction.code)}>
+                        Nearby highlights
+                    </button>
+                </div>
             </div>
             {users.length > 0 &&
                 users.map((user) => <Card key={user.name} user={user} handleClick={() => handleClick(user.id)} />)}
@@ -51,6 +61,7 @@ export async function getStaticProps() {
 
     const attraction = {
         name: 'Empire State Building',
+        code: 'empire_state_building',
     };
     return {
         props: {

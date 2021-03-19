@@ -333,7 +333,7 @@ export const CompanionFinderWrapper = styled.div`
         &__attraction {
             display: flex;
             margin-bottom: 10px;
-            width: 80%;
+            width: 90%;
             margin: 10px auto 20px;
             box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
             color: #222;
@@ -349,6 +349,18 @@ export const CompanionFinderWrapper = styled.div`
                 background: #fff;
                 width: 100%;
                 font-weight: bold;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                button {
+                    padding: 5px 10px;
+                    margin-top: 10px;
+                    border: solid 1px #1c1970;
+                    color: #1c1970;
+                    font-size: 12px;
+                }
             }
         }
     }
