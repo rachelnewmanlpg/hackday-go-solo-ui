@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Avatar } from '@pickle/avatar';
 import { useSelector } from 'react-redux';
+import Link from 'next/link';
 import { Profile as Container } from '../styles/global';
 import { getUser } from '../store/selectors/profile';
 
@@ -19,10 +20,12 @@ const Profile = () => {
             <div className="profile profile--email">Email: {user.email}</div>
             <div className="profile profile--age">Age: {user.age}</div>
             <div className="profile profile--bio">Bio: {user.bio}</div>
-
-            <button type="button" onClick={() => console.log('clicked')}>
-                I have an order number
-            </button>
+            {!user.orderNumber && (
+                <button type="button" onClick={() => console.log('clicked')}>
+                    I have an order number
+                </button>
+            )}
+            {user.orderNumber && <Link href="/attractions">Find Friends</Link>}
 
             <button type="button" onClick={() => console.log('clicked')}>
                 Where are you travelling?

@@ -4,12 +4,26 @@ import { profileActions } from '../ducks/profile';
 import { getData, postData } from '../../utils/request';
 import safeSaga from './safaSaga';
 
-export function* createProfile({ payload: { data } }) {
-    const response = yield call(postData, 'https://localhost:3000/api/proxy/profile', data);
+export function* createProfile({
+    payload: {
+        data: { data, orderNumber },
+    },
+}) {
     yield put({
         type: profileActions.createProfileSuccess.type,
         payload: {
-            data: response.data,
+            data: { ...data, orderNumber, city: 'Nyc' },
+        },
+    });
+    const response = yield call(postData, 'https://localhost:3000/api/proxy/profile', data);
+    const passResponse = yield call(
+        getData,
+        `https://localhost:3000/api/proxy/pass?email=${data.email}&orderNumber=${orderNumber}`
+    );
+    yield put({
+        type: profileActions.createProfileSuccess.type,
+        payload: {
+            data,
         },
     });
 }

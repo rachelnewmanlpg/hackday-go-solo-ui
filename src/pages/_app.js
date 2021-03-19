@@ -26,11 +26,11 @@ const App = ({ Component, pageProps, router }) => (
             <GlobalStyle />
             {router.pathname !== '/' && (
                 <Header>
-                    <Link href="/profile">
+                    <Link href="/profile" passHref>
                         <AccountIcon fill="currentColor" />
                     </Link>
                     <img src="/assets/logo.png" alt="" width="100" align="center" />
-                    <Link href="/attractions">
+                    <Link href="/attractions" passHref>
                         <AttractionsIcon fill="currentColor" />
                     </Link>
                 </Header>

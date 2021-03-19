@@ -50,7 +50,7 @@ const ProfileForm = () => {
     } = useForm({
         mode: 'all',
         resolver: yupResolver(validationSchema),
-        defaultValues: { travelApproach: 5, introverted: 5 },
+        defaultValues: { travelApproach: 5, describeYourself: 5 },
     });
 
     const onSubmit = (data) => {
@@ -61,15 +61,19 @@ const ProfileForm = () => {
             gender,
             travelApproach,
             describeYourself,
+            orderNumber,
             ...rest
         } = data;
         const checkedInterests = Object.values(dataInterests).filter((interest) => !!interest);
         const checkedLanguages = Object.values(dataLanguages).filter((language) => !!language);
         dispatch(
             profileActions.createProfile({
-                ...rest,
-                languages: checkedLanguages,
-                profileInfo: { interests: checkedInterests, exploreWith, gender, travelApproach, describeYourself },
+                data: {
+                    ...rest,
+                    languages: checkedLanguages,
+                    profileInfo: { interests: checkedInterests, exploreWith, gender, travelApproach, describeYourself },
+                },
+                orderNumber,
             })
         );
         Router.push('/attractions');

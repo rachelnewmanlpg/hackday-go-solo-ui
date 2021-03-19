@@ -20,11 +20,12 @@ export const initialState = {
 };
 
 const profileReducer = createReducer(initialState, {
-    [actions.createProfileSuccess]: (state) => {
+    [actions.createProfileSuccess]: (state, { payload: { data } }) => {
         state.created = true;
+        state.user = data;
     },
     [actions.getProfileSuccess]: (state, { payload: { data } }) => {
-        state.user = data;
+        // state.user = data;
     },
 });
 
