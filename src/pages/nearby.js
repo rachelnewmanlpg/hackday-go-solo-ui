@@ -7,9 +7,9 @@ const Nearby = ({ attraction }) => <AttractionNearby attraction={attraction} />;
 export async function getStaticProps() {
     // make fetch request for user here
     const attraction = {
-        title: 'London Eye',
-        lat: 51.503364,
-        long: -0.120453,
+        title: 'Empire State Building',
+        lat: 40.748609,
+        lng: -73.985696,
     };
 
     return {
@@ -22,8 +22,8 @@ export async function getStaticProps() {
 Nearby.propTypes = {
     attraction: PropTypes.shape({
         title: PropTypes.string.isRequired,
-        lat: PropTypes.string.isRequired,
-        lng: PropTypes.string.isRequired,
+        lat: PropTypes.number.isRequired,
+        lng: PropTypes.number.isRequired,
     }).isRequired,
 };
 

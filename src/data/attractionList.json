@@ -8,8 +8,8 @@
         "childGatePrice": 39.2,
         "childSellPrice": 39.2,
         "premium": false,
-        "lat": "51.503364",
-        "lng": "-0.120453"
+        "lat": "40.748609",
+        "lng": "-73.985696"
 
     },
     "Nyc_Att_Top_of_the_Rock_Observation_Deck": {
@@ -21,8 +21,8 @@
         "childGatePrice": 34.84,
         "childSellPrice": 34.84,
         "premium": false,
-        "lat": "51.503364",
-        "lng": "-0.120453"
+        "lat": "40.75923",
+        "lng": "-73.978476"
     },
     "Nyc_Att_Classic_Tour_1_Day_Ticket_by_Big_Bus": {
         "id": 110771,
@@ -126,7 +126,9 @@
         "adultSellPrice": 25,
         "childGatePrice": 0,
         "childSellPrice": 0,
-        "premium": false
+        "premium": false,
+      "lat": "51.503364",
+      "lng": "-0.120453"
     },
     "Nyc_Att_Intrepid_Sea_Air_and_Space_Museum": {
         "id": 100795,
@@ -136,7 +138,9 @@
         "adultSellPrice": 33,
         "childGatePrice": 24,
         "childSellPrice": 24,
-        "premium": false
+        "premium": false,
+      "lat": "51.503364",
+      "lng": "-0.120453"
     },
     "Nyc_Att_Central_Park_Sightseeing": {
         "id": 105444,
@@ -146,7 +150,9 @@
         "adultSellPrice": 54.44,
         "childGatePrice": 54.44,
         "childSellPrice": 54.44,
-        "premium": false
+        "premium": false,
+      "lat": "51.503364",
+      "lng": "-0.120453"
     },
     "Nyc_Att_Central_Park_Sightseeing_Bike_Tour": {
         "id": 107648,
@@ -156,7 +162,9 @@
         "adultSellPrice": 63.33,
         "childGatePrice": 63.33,
         "childSellPrice": 63.33,
-        "premium": false
+        "premium": false,
+      "lat": "51.503364",
+      "lng": "-0.120453"
     },
     "Nyc_Att_Ripley_s_Believe_It_or_Not_Times_Square": {
         "id": 100844,
@@ -166,7 +174,9 @@
         "adultSellPrice": 32.61,
         "childGatePrice": 24.99,
         "childSellPrice": 24.99,
-        "premium": false
+        "premium": false,
+      "lat": "51.503364",
+      "lng": "-0.120453"
     },
     "Nyc_Att_Solomon_R_Guggenheim_Museum": {
         "id": 100861,
@@ -176,7 +186,9 @@
         "adultSellPrice": 25,
         "childGatePrice": 0,
         "childSellPrice": 0,
-        "premium": false
+        "premium": false,
+      "lat": "52.503364",
+      "lng": "-0.320453"
     },
     "Nyc_Att_The_Ride_Nyc": {
         "id": 108844,

@@ -6,7 +6,7 @@ export default async (req, res) => {
     if (isProduction()) {
         url = '';
     } else {
-        url = 'http://localhost:8080/api';
+        url = 'http://localhost:8080/go-solo/v1';
     }
     const data = await axios
         .get(url)

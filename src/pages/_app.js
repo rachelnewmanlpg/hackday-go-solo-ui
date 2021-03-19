@@ -4,10 +4,13 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { withRouter } from 'next/router';
 import { PrimaryTheme } from '@pickle/themes';
+import { AccountIcon, AttractionsIcon } from '@pickle/icons';
+import Link from 'next/link';
 import { GlobalStyle, Header } from '../styles/global';
 import { wrapper } from '../store/configureStore';
+import { StyledIcon } from '../components/profileForm/styles';
 
-const App = ({ Component, pageProps }) => (
+const App = ({ Component, pageProps, router }) => (
     <>
         <Head>
             <title>NextJS Starter</title>
@@ -21,9 +24,17 @@ const App = ({ Component, pageProps }) => (
         </Head>
         <ThemeProvider theme={PrimaryTheme}>
             <GlobalStyle />
-            <Header>
-                <img src="/assets/logo.png" alt="" width="100" align="center" />
-            </Header>
+            {router.pathname !== '/' && (
+                <Header>
+                    <Link href="/profile">
+                        <AccountIcon fill="currentColor" />
+                    </Link>
+                    <img src="/assets/logo.png" alt="" width="100" align="center" />
+                    <Link href="/attractions">
+                        <AttractionsIcon fill="currentColor" />
+                    </Link>
+                </Header>
+            )}
             <Component {...pageProps} />
         </ThemeProvider>
     </>
