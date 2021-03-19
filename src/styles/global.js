@@ -194,11 +194,7 @@ export const AttractionList = styled.div`
         &--btn {
             display: block;
             width: 80%;
-            color: #222;
-            background: #18d2ff;
-            padding: 10px;
             margin: 20px auto;
-            border-radius: 5px;
 
             &__submit {
                 position: fixed;
@@ -206,6 +202,9 @@ export const AttractionList = styled.div`
                 left: 50%;
                 transform: translateX(-50%);
                 box-shadow: 0px 110px 80px 140px white;
+                :hover {
+                    box-shadow: 0px 110px 80px 140px white;
+                }
             }
 
             &:focus,
@@ -251,6 +250,13 @@ export const AttractionList = styled.div`
                 padding: 5px;
                 background: #fff;
                 font-size: 14px;
+
+                button {
+                    border: solid 1px #1c1970;
+                    color: #1c1970;
+                    font-size: 12px;
+                    padding: 5px 10px;
+                }
             }
         }
     }
@@ -273,5 +279,95 @@ export const SignUp = styled.div`
 
     > button {
         margin-top: 100px;
+    }
+`;
+
+export const CompanionCard = styled.div`
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    margin-bottom: 5px;
+
+    .c-card {
+        padding: 10px;
+
+        &__left {
+            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+
+            button {
+                margin-top: 10px;
+                border: solid 1px #1c1970;
+                color: #1c1970;
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
+
+        &__right {
+            font-size: 14px;
+            color: #222;
+            width: 100%;
+
+            input {
+                width: 80%;
+            }
+        }
+
+        &--image {
+            background: #999;
+            height: 80px;
+            width: 80px;
+            border-radius: 100%;
+        }
+
+        &__languages {
+            margin-bottom: 10px;
+            display: flex;
+
+            img {
+                width: 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+`;
+
+export const CompanionFinderWrapper = styled.div`
+    .c-card {
+        &__attraction {
+            display: flex;
+            margin-bottom: 10px;
+            width: 90%;
+            margin: 10px auto 20px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+            color: #222;
+
+            &--image {
+                width: 100px;
+                height: 80px;
+                background: #1c1970;
+            }
+
+            &--content {
+                padding: 5px;
+                background: #fff;
+                width: 100%;
+                font-weight: bold;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                button {
+                    padding: 5px 10px;
+                    margin-top: 10px;
+                    border: solid 1px #1c1970;
+                    color: #1c1970;
+                    font-size: 12px;
+                }
+            }
+        }
     }
 `;
