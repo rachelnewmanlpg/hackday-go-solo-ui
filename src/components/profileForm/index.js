@@ -72,16 +72,18 @@ const ProfileForm = () => {
                 profileInfo: { interests: checkedInterests, exploreWith, gender, travelApproach, describeYourself },
             })
         );
-        Router.push('/profile');
+        Router.push('/attractions');
     };
     return (
         <>
             {questionNumber > 0 && (
                 <QuestionRow between>
-                    <small>{questionNumber} of 7</small>
-                    <button type="button" onClick={() => setQuestionNumber(questionNumber + 1)}>
-                        <small>skip</small>
-                    </button>
+                    <small>{questionNumber} of 5</small>
+                    {questionNumber < 5 && (
+                        <button type="button" onClick={() => setQuestionNumber(questionNumber + 1)}>
+                            <small>skip</small>
+                        </button>
+                    )}
                 </QuestionRow>
             )}
             <Form onSubmit={handleSubmit(onSubmit)} data-testid="profile-form">
@@ -142,7 +144,11 @@ const ProfileForm = () => {
                         So we can find like minded travellers we need to ask a couple of additional questions to build
                         up your profile
                     </small>
-                    <StyledButton type="button" onClick={() => setQuestionNumber(1)}>
+                    <StyledButton
+                        type="button"
+                        disabled={Object.keys(errors).length > 0}
+                        onClick={() => setQuestionNumber(1)}
+                    >
                         Build profile
                     </StyledButton>
                 </Show>
