@@ -82,6 +82,7 @@
     "redux-mock-store": "^1.5.4"
   },
   "dependencies": {
+    "@pickle/avatar": "^1.0.9",
     "@pickle/button": "^3.0.10",
     "@pickle/icons": "^2.0.8",
     "@pickle/themes": "^1.0.10",
