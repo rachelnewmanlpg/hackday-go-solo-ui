@@ -1,30 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Avatar } from '@pickle/avatar';
+import { useSelector } from 'react-redux';
 import { Profile as Container } from '../styles/global';
+import { getUser } from '../store/selectors/profile';
 
-const Profile = ({ user }) => (
-    <Container>
-        <div className="profile profile--avatar">
-            <Avatar
-                img="https://www.nacdnet.org/wp-content/uploads/2016/06/person-placeholder.jpg"
-                text={`Hi, ${user.name}!`}
-            />
-        </div>
+const Profile = () => {
+    const user = useSelector(getUser);
+    return (
+        <Container>
+            <div className="profile profile--avatar">
+                <Avatar
+                    img="https://www.nacdnet.org/wp-content/uploads/2016/06/person-placeholder.jpg"
+                    text={`Hi, ${user.name}!`}
+                />
+            </div>
 
-        <div className="profile profile--email">Email: {user.email}</div>
-        <div className="profile profile--age">Age: {user.age}</div>
-        <div className="profile profile--bio">Bio: {user.bio}</div>
+            <div className="profile profile--email">Email: {user.email}</div>
+            <div className="profile profile--age">Age: {user.age}</div>
+            <div className="profile profile--bio">Bio: {user.bio}</div>
 
-        <button type="button" onClick={() => console.log('clicked')}>
-            I have an order number
-        </button>
+            <button type="button" onClick={() => console.log('clicked')}>
+                I have an order number
+            </button>
 
-        <button type="button" onClick={() => console.log('clicked')}>
-            Where are you travelling?
-        </button>
-    </Container>
-);
+            <button type="button" onClick={() => console.log('clicked')}>
+                Where are you travelling?
+            </button>
+        </Container>
+    );
+};
 
 export async function getStaticProps() {
     // make fetch request for user here
