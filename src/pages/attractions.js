@@ -36,12 +36,16 @@ const AttractionList = ({ attractions }) => {
                     {attractions.length > 0 &&
                         attractions.map((item) => (
                             <div className="attraction attraction--tile" key={item.id}>
-                                <button type="button" onClick={() => handleClick(item.code)}>
-                                    <UserIconWrapper
-                                        className={friendAttractions.includes(item.code) ? 'active' : ''}
-                                    />
-                                </button>
-                                <div className="attraction--tile__content">{item.name}</div>
+                                <div className="attraction attraction--tile__image" />
+
+                                <div className="attraction--tile__content">
+                                    {item.name}
+                                    <button type="button" onClick={() => handleClick(item.code)}>
+                                        <UserIconWrapper
+                                            className={friendAttractions.includes(item.code) ? 'active' : ''}
+                                        />
+                                    </button>
+                                </div>
                             </div>
                         ))}
                 </div>

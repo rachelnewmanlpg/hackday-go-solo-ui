@@ -134,7 +134,7 @@ export const AttractionList = styled.div`
         &--btn {
             display: block;
             width: 80%;
-            color: #fff;
+            color: #222;
             background: #18d2ff;
             padding: 10px;
             margin: 20px auto;
@@ -155,16 +155,15 @@ export const AttractionList = styled.div`
         }
 
         &--wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 5px;
-            row-gap: 5px;
+            display: flex;
+            flex-direction: column;
         }
 
         button {
             color: #18d2ff;
             position: absolute;
-            left: 10px;
+            right: 10px;
+            bottom: 10px;
 
             &:focus,
             &:active {
@@ -173,26 +172,25 @@ export const AttractionList = styled.div`
         }
 
         &--tile {
+            height: 100px;
             width: 100%;
-            background: #111;
-            color: #fff;
-            padding: 10px;
-            aspect-ratio: 1 / 1;
+            padding: 0 10px;
             position: relative;
+            margin: 10px 0;
+            display: flex;
+
+            &__image {
+                width: 150px;
+                height: 100px;
+                background: #1c1970;
+            }
 
             &__content {
-                position: absolute;
-                bottom: 10px;
-                left: 10px;
-                right: 10px;
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+                background: #fff;
                 font-size: 14px;
-                overflow: hidden;
-                -webkit-box-orient: vertical;
-                display: block;
-                display: -webkit-box;
-                overflow: hidden !important;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 2;
             }
         }
     }
