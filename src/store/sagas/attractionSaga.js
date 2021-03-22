@@ -5,16 +5,10 @@ import { getData, postData } from '../../utils/request';
 import safeSaga from './safaSaga';
 import { attractionActions } from '../ducks/attractions';
 
-export function* getAttractionsByCity({ payload: data }) {
+export function* getAttractionsByCity({ payload: { data } }) {
+    const response = yield call(getData, `http://localhost:3000/api/proxy/attraction/${data}/city`, data);
     yield put({
         type: attractionActions.getAttractionSuccess.type,
-        payload: {
-            data: {},
-        },
-    });
-    const response = yield call(getData, `https://localhost:3000/api/proxy/attraction/${data}/city`, data);
-    yield put({
-        type: profileActions.getAttractionSuccess.type,
         payload: {
             data: response.data,
         },

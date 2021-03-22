@@ -35,7 +35,9 @@ export const initialState = {
 };
 
 const attractionReducer = createReducer(initialState, {
-    [actions.getAttractionSuccess]: (state, { payload: { data } }) => {},
+    [actions.getAttractionSuccess]: (state, { payload: { data } }) => {
+        state.attractionList = data;
+    },
     [actions.getProfileSuccess]: (state, { payload: { data } }) => {
         // state.user = data;
     },

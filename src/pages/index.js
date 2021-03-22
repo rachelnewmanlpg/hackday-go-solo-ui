@@ -26,7 +26,7 @@ const HomePage = () => {
                     {!showLoginInput && <StyledButton onClick={() => toggleLoginInput(true)}>Log In</StyledButton>}
                     {showLoginInput && (
                         <>
-                            <StyledInput value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <StyledInput value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" />
                             <StyledButton onClick={() => onLogin()}>LogIn</StyledButton>
                         </>
                     )}

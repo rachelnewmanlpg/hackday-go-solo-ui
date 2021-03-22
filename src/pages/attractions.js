@@ -14,9 +14,11 @@ const AttractionList = () => {
     const [friendAttractions, setFriendAttractions] = useState([]);
     const attractions = useSelector(getAttractionList);
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(attractionActions.getAttractionsByCity('Nyc'));
-    });
+    }, []);
+
     const handleClick = (sku) => {
         if (friendAttractions.includes(sku)) {
             setFriendAttractions(friendAttractions.filter((e) => e !== sku));

@@ -19,7 +19,7 @@ const Profile = () => {
 
             <div className="profile profile--email">Email: {user.email}</div>
             <div className="profile profile--age">Age: {user.age}</div>
-            <div className="profile profile--bio">Bio: {user.bio}</div>
+            <div className="profile profile--bio">Languages: {user.languages.join(', ')}</div>
             {!user.orderNumber && (
                 <button type="button" onClick={() => console.log('clicked')}>
                     I have an order number

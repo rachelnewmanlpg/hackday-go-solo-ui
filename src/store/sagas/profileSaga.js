@@ -15,15 +15,32 @@ export function* createProfile({
             data: { ...data, orderNumber, city: 'Nyc' },
         },
     });
-    const response = yield call(postData, 'https://localhost:3000/api/proxy/profile', data);
+    const response = yield call(postData, 'http://localhost:3000/api/proxy/profile', data);
     const passResponse = yield call(
         getData,
-        `https://localhost:3000/api/proxy/pass?email=${data.email}&orderNumber=${orderNumber}`
+        `http://localhost:3000/api/proxy/pass?email=${data.email}&orderNumber=${orderNumber}`
     );
     yield put({
         type: profileActions.createProfileSuccess.type,
         payload: {
             data,
+        },
+    });
+}
+
+export function* getPass({
+    payload: {
+        data: { orderNumber },
+    },
+}) {
+    const passResponse = yield call(
+        getData,
+        `http://localhost:3000/api/proxy/pass?email=${email}&orderNumber=${orderNumber}`
+    );
+    yield put({
+        type: profileActions.createProfileSuccess.type,
+        payload: {
+            passResponse,
         },
     });
 }
@@ -35,7 +52,7 @@ export function* getProfile({ payload: data }) {
             data: {},
         },
     });
-    const response = yield call(getData, `https://localhost:3000/api/proxy/profile/email=${data}`, data);
+    const response = yield call(getData, `http://localhost:3000/api/proxy/profile/email=${data}`, data);
     yield put({
         type: profileActions.getProfileSuccess.type,
         payload: {
